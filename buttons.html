@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Button Set</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 p-8 transition-colors duration-300">
+    <div class="max-w-4xl mx-auto space-y-8">
+        <!-- Dark Mode Toggle -->
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 dark:text-white">Tailwind Button Set</h1>
+            <button
+                id="themeToggle"
+                class="px-4 py-2 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-300 transition-all duration-300 flex items-center gap-2"
+                onclick="toggleTheme()"
+            >
+                <svg id="sunIcon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+                <svg id="moonIcon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                </svg>
+                <span id="themeText" class="font-medium">Dark Mode</span>
+            </button>
+        </div>
+
+        <!-- Primary Buttons -->
+        <section class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow dark:shadow-lg">
+            <h2 class="text-xl font-semibold mb-4 dark:text-white">Primary Buttons</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                    Primary
+                </button>
+                <button class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                    Primary MD
+                </button>
+                <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                    Primary LG
+                </button>
+                <button class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+                    Primary Full
+                </button>
+            </div>
+        </section>
+
+        <!-- Secondary Buttons -->
+        <section class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow dark:shadow-lg">
+            <h2 class="text-xl font-semibold mb-4 dark:text-white">Secondary Buttons</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="px-6 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition">
+                    Secondary
+                </button>
+                <button class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition">
+                    Secondary MD
+                </button>
+                <button class="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition">
+                    Secondary LG
+                </button>
+                <button class="px-6 py-2 bg-gray-600 text-white rounded-full hover:bg-gray-700 transition">
+                    Secondary Full
+                </button>
+            </div>
+        </section>
+
+        <!-- Outline Buttons -->
+        <section class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow dark:shadow-lg">
+            <h2 class="text-xl font-semibold mb-4 dark:text-white">Outline Buttons</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="px-6 py-2 border-2 border-blue-600 text-blue-600 rounded hover:bg-blue-600 hover:text-white transition">
+                    Outline
+                </button>
+                <button class="px-6 py-2 border-2 border-green-600 text-green-600 rounded-md hover:bg-green-600 hover:text-white transition">
+                    Outline Success
+                </button>
+                <button class="px-6 py-2 border-2 border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition">
+                    Outline Danger
+                </button>
+                <button class="px-6 py-2 border-2 border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition">
+                    Outline Purple
+                </button>
+            </div>
+        </section>
+
+        <!-- Success/Warning/Danger Buttons -->
+        <section class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow dark:shadow-lg">
+            <h2 class="text-xl font-semibold mb-4 dark:text-white">Status Buttons</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                    Success
+                </button>
+                <button class="px-6 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition">
+                    Warning
+                </button>
+                <button class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+                    Danger
+                </button>
+                <button class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+                    Info
+                </button>
+            </div>
+        </section>
+
+        <!-- Size Variants -->
+        <section class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow dark:shadow-lg">
+            <h2 class="text-xl font-semibold mb-4 dark:text-white">Size Variants</h2>
+            <div class="flex flex-wrap items-center gap-4">
+                <button class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                    Small
+                </button>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                    Medium
+                </button>
+                <button class="px-6 py-3 text-lg bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                    Large
+                </button>
+                <button class="px-8 py-4 text-xl bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                    Extra Large
+                </button>
+            </div>
+        </section>
+
+        <!-- Disabled States -->
+        <section class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow dark:shadow-lg">
+            <h2 class="text-xl font-semibold mb-4 dark:text-white">Disabled States</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="px-6 py-2 bg-blue-600 text-white rounded opacity-50 cursor-not-allowed" disabled>
+                    Disabled
+                </button>
+                <button class="px-6 py-2 border-2 border-blue-600 text-blue-600 rounded opacity-50 cursor-not-allowed" disabled>
+                    Disabled Outline
+                </button>
+            </div>
+        </section>
+
+        <!-- Icon Buttons -->
+        <section class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow dark:shadow-lg">
+            <h2 class="text-xl font-semibold mb-4 dark:text-white">Icon Buttons</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                    </svg>
+                    Add Item
+                </button>
+                <button class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Confirm
+                </button>
+                <button class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                    </svg>
+                    Delete
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Check for saved theme preference or default to 'light' mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.classList.add(currentTheme);
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeText = document.getElementById('themeText');
+
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                localStorage.setItem('theme', 'light');
+                themeText.textContent = 'Dark Mode';
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeText.textContent = 'Light Mode';
+            }
+        }
+
+        // Set initial text
+        if (currentTheme === 'dark') {
+            document.getElementById('themeText').textContent = 'Light Mode';
+        }
+    </script>
+</body>
+</html>
