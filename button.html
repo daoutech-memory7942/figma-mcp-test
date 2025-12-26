@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Set</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        :root {
+            --btn-bg-primary-base: #08a7bf;
+            --btn-bg-primary-hover: #0590a5;
+            --btn-bg-normal-base: white;
+            --btn-bg-normal-hover: #e7edf4;
+            --btn-border-primary: #08a7bf;
+            --btn-border-normal: #a7b9cc;
+            --text-neutral-white: white;
+            --text-neutral-base: #2f353c;
+            --btn-text-primary: #08a7bf;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 p-8">
+    <div class="grid grid-cols-2 gap-4 w-fit">
+        <!-- Primary Normal -->
+        <button class="flex items-center justify-center h-8 px-3 rounded-md bg-[#08a7bf] hover:bg-[#0590a5] transition-colors">
+            <span class="text-white text-sm font-medium leading-[1.6]">Button</span>
+        </button>
+
+        <!-- Secondary Normal -->
+        <button class="flex items-center justify-center h-8 px-3 rounded-md bg-white border border-[#08a7bf] hover:bg-[#e7edf4] transition-colors">
+            <span class="text-[#08a7bf] text-sm font-medium leading-[1.6]">Button</span>
+        </button>
+
+        <!-- Primary Hover (simulated) -->
+        <button class="flex items-center justify-center h-8 px-3 rounded-md bg-[#08a7bf] hover:bg-[#0590a5] transition-colors">
+            <span class="text-white text-sm font-medium leading-[1.6]">Button</span>
+        </button>
+
+        <!-- Secondary Hover (simulated) -->
+        <button class="flex items-center justify-center h-8 px-3 rounded-md bg-white border border-[#08a7bf] hover:bg-[#e7edf4] transition-colors">
+            <span class="text-[#08a7bf] text-sm font-medium leading-[1.6]">Button</span>
+        </button>
+
+        <!-- Normal Normal -->
+        <button class="flex items-center justify-center h-8 px-3 rounded-md bg-white border border-[#a7b9cc] hover:bg-[#e7edf4] transition-colors">
+            <span class="text-[#2f353c] text-sm font-medium leading-[1.6]">Button</span>
+        </button>
+
+        <!-- Normal Hover (simulated) -->
+        <button class="flex items-center justify-center h-8 px-3 rounded-md bg-white border border-[#a7b9cc] hover:bg-[#e7edf4] transition-colors">
+            <span class="text-[#2f353c] text-sm font-medium leading-[1.6]">Button</span>
+        </button>
+
+        <!-- Ghost Normal -->
+        <button class="flex items-center justify-center h-8 px-3 rounded-md bg-white hover:bg-[#e7edf4] transition-colors">
+            <span class="text-[#2f353c] text-sm font-medium leading-[1.6]">Button</span>
+        </button>
+
+        <!-- Ghost Hover (simulated) -->
+        <button class="flex items-center justify-center h-8 px-3 rounded-md bg-white hover:bg-[#e7edf4] transition-colors">
+            <span class="text-[#2f353c] text-sm font-medium leading-[1.6]">Button</span>
+        </button>
+    </div>
+</body>
+</html>
