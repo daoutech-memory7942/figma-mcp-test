@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(claude mcp add:*)",
-      "Bash(claude mcp:*)"
+      "Bash(claude mcp:*)",
+      "Bash(npm init:*)",
+      "Bash(npx storybook@latest init:*)",
+      "Bash(npx storybook@8.4.7 init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init:*)",
+      "Bash(pnpm exec tailwindcss:*)",
+      "Bash(pnpm add:*)"
     ]
   }
 }
