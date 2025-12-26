@@ -21,13 +21,13 @@ export default function BtnSolid({
   const getBackgroundClasses = () => {
     if (isPrimary) {
       return isHover
-        ? "bg-[#0590a5]"
-        : "bg-[#08a7bf] hover:bg-[#0590a5]";
+        ? "bg-[#12a67a]"
+        : "bg-[#15bf8d] hover:bg-[#12a67a]";
     }
     if (isSecondary) {
       return isHover
-        ? "bg-[#e7edf4] border border-[#08a7bf]"
-        : "bg-white border border-[#08a7bf] hover:bg-[#e7edf4]";
+        ? "bg-[#e7edf4] border border-[#15bf8d]"
+        : "bg-white border border-[#15bf8d] hover:bg-[#e7edf4]";
     }
     if (isNormal) {
       return isHover
@@ -48,7 +48,7 @@ export default function BtnSolid({
       return "text-white";
     }
     if (isSecondary) {
-      return "text-[#08a7bf]";
+      return "text-[#15bf8d]";
     }
     return "text-[#2f353c]";
   };
